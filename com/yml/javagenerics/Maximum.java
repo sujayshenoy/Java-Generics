@@ -14,12 +14,12 @@ public class Maximum<T extends Comparable<T>> {
         return maximum(list);
     }
 
-    private static <T extends Comparable<T>> T maximum(List<T> params) {
+	private static <T extends Comparable<T>> T maximum(List<T> params) {
 		PrintWriter out = new PrintWriter(System.out, true);
-        
+
 		int n = params.size();
 
-		for (int i = 0; i < n-1; i++) {
+		for (int i = 0; i < n - 1; i++) {
 			for (int j = 0; j < n - i - 1; j++) {
 				if (params.get(j).compareTo(params.get(j + 1)) > 0) {
 					T temp = params.get(j);
@@ -28,10 +28,20 @@ public class Maximum<T extends Comparable<T>> {
 				}
 			}
 		}
-		
-		T max = params.get(n-1);
-		out.println(" Maximum : "+max);
+
+		T max = params.get(n - 1);
+		printMax(params, max);
 		return max;
-    }
+	}
+	
+	private static <T> void printMax(List<T> params, T max) {
+		PrintWriter out = new PrintWriter(System.out);
+		out.print("Max Value among ");
+		for(T i: params) {
+			out.print(i+",");
+		}
+		out.println(" is " + max);
+		out.flush();
+	}
     
 }
