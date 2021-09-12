@@ -14,17 +14,17 @@ public class JavaGenericMain {
 		String a3 = "apple", b3 = "peach", c3 = "banana";
         String p3 = "banana", q3 = "apple", r3 = "peach";
         
-        Maximum.maximum(a1, b1, c1);
-        Maximum.maximum(x1, y1, z1);
-        Maximum.maximum(p1, q1, r1);
+        new Maximum<Integer>(a1, b1, c1).testMaximum();
+        new Maximum<Integer>(x1, y1, z1).testMaximum();
+        new Maximum<Integer>(p1, q1, r1).testMaximum();
 
-        Maximum.maximum(a2, b2, c2);
-        Maximum.maximum(x2, y2, z2);
-        Maximum.maximum(p2, q2, r2);
+        new Maximum<Float>(a2, b2, c2).testMaximum();
+        new Maximum<Float>(x2, y2, z2).testMaximum();
+        new Maximum<Float>(p2, q2, r2).testMaximum();
 
-        Maximum.maximum(x3, y3, z3);
-        Maximum.maximum(a3, b3, c3);
-        Maximum.maximum(p3, q3, r3);
+        new Maximum<String>(x3, y3, z3).testMaximum();
+        new Maximum<String>(a3, b3, c3).testMaximum();
+        new Maximum<String>(p3, q3, r3).testMaximum();
 
     }
 }
