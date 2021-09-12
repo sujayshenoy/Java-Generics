@@ -2,13 +2,13 @@ package com.yml.javagenerics;
 
 public class JavaGenericMain {
     public static void main(String args[]) {
-		Float a = 20f, b = 3f, c = 7f;
-        Float x = 5f, y = 10f, z = 2f;
-        Float p = 2f, q = 9f, r = 15f;
+        String x = "peach", y = "banana:", z = "apple";
+		String a = "apple", b = "peach", c = "banana";
+        String p = "banana", q = "apple", r = "peach";
         
-        Maximum.maximumFloat(a, b, c);
-        Maximum.maximumFloat(x, y, z);
-        Maximum.maximumFloat(p, q, r);
+        Maximum.maximumString(x, y, z);
+        Maximum.maximumString(a, b, c);
+        Maximum.maximumString(p, q, r);
 
     }
 }
